@@ -21,6 +21,8 @@ To address these issues, modern LLMs use more sophisticated techniques:
 *   **Subword-Based Tokenization:** This "best of both worlds" approach keeps frequent words whole while breaking rare words into meaningful sub-units (e.g., "tokenizing" becomes "token" and "izing").
 
 ### **Building a Good Tokenizer: The Byte Pair Encoding (BPE) Method**
+<img width="493" height="130" alt="image" src="https://github.com/user-attachments/assets/7b093c3f-8e8f-4164-97a7-1da4ddb73e28" />
+
 The gold standard for current models like GPT-2 and GPT-3 is **Byte Pair Encoding (BPE)**. Here is how to build one:
 
 1.  **Initialize with Characters:** Start by splitting your entire text corpus into individual characters and adding an end-of-word symbol (like `/w`) to mark where words conclude.
