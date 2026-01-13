@@ -22,12 +22,12 @@ Step 1:
 **Iteration 2** (Merging 'es' and 't'): The new token es is frequently followed by t. 
 These are merged to create the subword EST.
 
-Step 2:
 
 <img width="300" height="215" alt="image" src="https://github.com/user-attachments/assets/208900c0-6fb8-46a6-a48a-246f9a2ed2ca" />
 
 **Iteration 3** (Merging 'EST' and '/w'): Since EST is always the end of the word in this specific dataset,
 the algorithm merges it with the end-of-word symbol to create estw.
+
 <img width="286" height="224" alt="image" src="https://github.com/user-attachments/assets/2c16ff67-a490-42e0-b3aa-7e06cacbb5ec" />
 
 
@@ -35,6 +35,12 @@ the algorithm merges it with the end-of-word symbol to create estw.
 together (in "old" and "older") and merges them into ol. Finally, it merges ol and d to create the root token old.
 
 <img width="243" height="209" alt="image" src="https://github.com/user-attachments/assets/f74391cb-3a5d-4f29-9afd-ec28188c3e7b" />
+
+
+<img width="323" height="200" alt="image" src="https://github.com/user-attachments/assets/6a5a43b0-1e2d-4af7-a479-4734852bb5ec" />
+
+
+***Stopping Criteria** :- Iteration or token count
 
 
 ##### The Resulting Vocabulary
