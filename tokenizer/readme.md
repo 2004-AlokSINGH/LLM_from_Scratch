@@ -20,6 +20,22 @@ To address these issues, modern LLMs use more sophisticated techniques:
 *   **Regular Expressions (`re.split`):** Using Python’s regular expression library allows for a more nuanced split that separates punctuation marks (commas, periods, question marks) into their own individual tokens.
 *   **Subword-Based Tokenization:** This "best of both worlds" approach keeps frequent words whole while breaking rare words into meaningful sub-units (e.g., "tokenizing" becomes "token" and "izing").
 
+### The Evolution of Tokenization
+
+```
+Before modern models like GPT, researchers experimented with different tokenization strategies, each with distinct pros and cons:
+• Word-Based Tokenizers: Every word is a token.
+    ◦ Pros: Sequences are short.
+    ◦ Cons: They suffer from "Out of Vocabulary" (OOV) errors. If a user types a word the model hasn't seen,
+      the model fails or must use a generic unknown token (<|unk|>). They also fail to see the relationship between
+      similar words like "boy" and "boys".
+• Character-Based Tokenizers: Every letter is a token.
+    ◦ Pros: Very small vocabulary (only 256 characters for English) and zero OOV errors.
+    ◦ Cons: Sequences become massive (e.g., "dinosaur" becomes 8 tokens instead of 1), and the model loses the semantic meaning of whole words.
+• Subword-Based Tokenizers (The "Goldilocks" Solution): This method keeps frequently used words whole but breaks rare words into smaller, meaningful pieces.
+````
+
+
 ### **Building a Good Tokenizer: The Byte Pair Encoding (BPE) Method**
 <img width="493" height="130" alt="image" src="https://github.com/user-attachments/assets/7b093c3f-8e8f-4164-97a7-1da4ddb73e28" />
 
