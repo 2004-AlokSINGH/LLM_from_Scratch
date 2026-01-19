@@ -1,3 +1,7 @@
+GPT token embedding:-
+
+
+<img width="512" height="94" alt="image" src="https://github.com/user-attachments/assets/05779768-4dd7-473d-94a6-42e60de3abd1" />
 
 ---
 
